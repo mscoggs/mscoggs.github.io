@@ -64,11 +64,22 @@
 								<h2 class="major">Research</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
 								<p><b>astro_ml</b> &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a>
-									<br>Astronomer's can infer the properties of a star using the star's flux. Machine learning can be applied to expedite this labeling process.
-									Another research group has already successfully applied machine learning to label ~90% of the stars on an Hertzsprung-Russell diagram
-									(<a href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">shown below</a>), with the exception what we're calling
-									'the box of doom'. This is the lower right part of the diagram which holds the cooler
-									and less luminous stars. We apply new techniques to try and correct this mislabeling.
+									<br>
+									Machine learning (ML) allows efficient extraction of physical properties from stellar spectra that have been obtained by large surveys.
+									ML approaches have been used in the past to analyze spectra of evolved red giants and high mass main sequence (MS)
+									stars, but struggled to perform well for the young
+									stellar objects (YSOs, the stars located just off the main-sequence of the <a href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">HR diagram</a>,
+									shown below) and low mass MS stars, resulting in a scatter of surface gravity and chemical composition predictions.
+									One of the reasons for the poor performance is the lack of accurate labels with which the algorithm can be trained. In this
+									work we generate labels for YSOs and low mass MS stars, with spectra observed by APOGEE, which are then used to train a deep
+									Convolutional Neural Network (CNN). The labels for low mass MS stars and YSOs were generated through interpolating the
+									photo-metric data from \textit{Gaia} and 2MASS. We used this data combined with machine learning to assist with the
+									interpolations for the YSOs over the theoretical and observed isochrones. The CNN model is trained using a combination of
+									curriculum learning and a learning rate schedule, and has produced reliable predictions of surface gravities for YSOs. We are
+									also investigating the potential use of generative adversarial networks (GAN) to create synthetic spectra based on these stellar
+									properties.
+
+
 								</p>
 									<img src="images/HR.png" width="550px">
 									<p><br><br></p>
@@ -76,15 +87,24 @@
 								<p><b>flare_cycles</b> &emsp; <a href="https://github.com/mscoggs/flare_cycles">Github Repository</a>
 									<br>Our Sun goes through an 11-year Solar cycle, which is a periodic change in the
 									Sun's magnetic activity. The Sun's place in this cycle can be tracked using sunspots (<a href="https://en.wikipedia.org/wiki/Solar_cycle">shown below</a>)
-									and flare rates. We ask if other stars show this periodic behavior, and try to answer the question by finding flare rates using Kepler Data
+									and flare rates. We ask if other stars show this periodic behavior, and try to answer the question by finding flare rates in Kepler Data
 							</p>
 									<img src="images/Solar_cycle.gif" width="550px">
 									<p><br><br></p>
 
 									<p><b>qubit_simulation</b>  &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a>
-										<br>We use classical computers and various methods to simulate the evolution of a complex-many body problem. We hope to find patterns in the protocols
-										for relatively small systems so that we can extrapolate this pattern to larger systems where the evolution can be simulated on a quantum device. The quantum devices
-										allows for simulation where classical computers are computationally prohibited. 							</p>
+										<br>Numerical solutions to complex many-body models are severely limited by classical computational power.
+										Using controllable quantum devices may help with the simulation of these models.
+										One approach, known as the variational quantum algorithm, is based on tailoring evolution to prepare the a priori
+										unknown ground states of model Hamiltonians. In this work, we address the challenge of finding patterns in optimal
+										variational protocols, where an optimal protocol minimizes the total time it takes to get from the ground state of
+										one device to the ground state of another target device. Using a classical computer, we simulate the evolution of
+										superconducting ‘gmon’ qubits and use Monte-Carlo (MC) simulations to find this optimal protocol for finite systems
+									  sizes. The MC method finds optimal protocols that are roughly bang-bang, as predicted by theory. We compare the MC
+										method with an adiabatic method and show that it reaches the ground state in shorter times. Further research will
+										identify patterns in these protocols that can be extrapolated to larger system sizes in order to inform efficient
+										large-scale simulations on the quantum device. 			
+										</p>
 									<p><br><br></p>
 
 							</article>
