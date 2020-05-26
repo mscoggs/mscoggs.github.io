@@ -67,21 +67,30 @@
 							<article id="research">
 								<h2 class="major">Research</h2>
 								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								<p><b>astro_ml</b> &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a>
+								<p><b>astro_ml</b> &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a>&emsp; <a href="https://arxiv.org/pdf/2002.08390.pdf">Publication</a>
 									<br>
-									Machine learning (ML) allows efficient extraction of physical properties from stellar spectra that have been obtained by large surveys.
-									ML approaches have been used in the past to analyze spectra of evolved red giants and high mass main sequence (MS)
-									stars, but struggled to perform well for the young
-									stellar objects (YSOs, the stars located just off the main-sequence of the <a href="https://en.wikipedia.org/wiki/Hertzsprung%E2%80%93Russell_diagram">HR diagram</a>,
-									shown below) and low mass MS stars, resulting in a scatter of surface gravity and chemical composition predictions.
-									One of the reasons for the poor performance is the lack of accurate labels with which the algorithm can be trained. In this
-									work we generate labels for YSOs and low mass MS stars, with spectra observed by APOGEE, which are then used to train a deep
-									Convolutional Neural Network (CNN). The labels for low mass MS stars and YSOs were generated through interpolating the
-									photo-metric data from Gaia and 2MASS. We used this data combined with machine learning to assist with the
-									interpolations for the YSOs over the theoretical and observed isochrones. The CNN model is trained using a combination of
-									curriculum learning and a learning rate schedule, and has produced reliable predictions of surface gravities for YSOs. We are
-									also investigating the potential use of generative adversarial networks (GAN) to create synthetic spectra based on these stellar
-									properties.
+									Abstract:
+									<br>
+									 Machine learning allows efficient extraction of physical properties from stellar spectra that have
+									been obtained by large surveys. The viability of ML approaches has been demonstrated for spectra
+									covering a variety of wavelengths and spectral resolutions, but most often for main sequence or evolved
+									stars, where reliable synthetic spectra provide labels and data for training. Spectral models of young
+									stellar objects (YSOs) and low mass main sequence (MS) stars are less well-matched to their empirical
+									counterparts, however, posing barriers to previous approaches to classify spectra of such stars. In this
+									work we generate labels for YSOs and low mass MS stars through their photometry. We then use
+									these labels to train a deep convolutional neural network to predict log g, Tef f and Fe/H for stars with
+									APOGEE spectra in the DR14 dataset. This “APOGEE Net” has produced reliable predictions of
+									log g for YSOs, with uncertainties of within 0.1 dex and a good agreement with the structure indicated
+									by pre-main sequence evolutionary tracks, and correlate well with independently derived stellar radii.
+									These values will be useful for studying pre-main sequence stellar populations to accurately diagnose
+									membership and ages.
+									<br>
+									TLDR/simple prose:
+									<br>
+									Machine learning has shown promise in predicting stellar properties (temperature, composition, surface gravity, etc)
+									given an input (<a href="http://spiff.rit.edu/classes/phys230/lectures/spec_interp/spec_interp.html">spectra</a>).
+									In previous attempts, the performance has been underwhelming for low mass and young stars. We aim to correct that with
+									a new machine learning algorithm that was properly trained in these domains. We do pretty decent.
 
 
 								</p>
@@ -89,20 +98,31 @@
 									<p><br><br></p>
 
 								<p><b>flare_cycles</b> &emsp; <a href="https://github.com/mscoggs/flare_cycles">Github Repository</a> &emsp; <a href="https://iopscience.iop.org/article/10.3847/2515-5172/ab45a0">Publication</a>
-									<br>Measuring the prevalence and duration of stellar activity cycles gives key insight into the origin of stellar magnetic dynamos.
+									<br>
+									Abstract:
+									<br>
+									Measuring the prevalence and duration of stellar activity cycles gives key insight into the origin of stellar magnetic dynamos.
 									 The canonical activity cycle is the Sun's, which lasts approximately 11 years. Assuming this represents a typical stellar cycle,
 									 years to decades of observations are required to detect cyclic magnetic activity in other stars. Currently, activity cycles for
 									 other stars are traced through either precise integrated flux measurements, chromospheric emission line
 									 monitoring campaigns, or starspot tracking (<a href="https://en.wikipedia.org/wiki/Solar_cycle">shown below</a>). However, all these
 									 approaches have challenges. Stellar activity data suggests that flares may be a good measure for tracking magnetic activity cycles. Here we
 									 briefly explore this idea by searching for coherent variations in the fractional luminosity emitted in white light flares over time.
-
+									 <br>
+									 TLDR/simple prose:
+								 	<br>
+									The sun has an 11-year (<a href="https://en.wikipedia.org/wiki/Solar_cycle">solar cycle</a>). We ask if other stars also have a cycle, and attempt
+								  answer this using stellar flares as the metric (who's frequency changes within the cycle). The results don't show unambigious results, but we only had
+									access to 4-year observational periods from Kepler Telescope. We hope this could be a useful metric for longer observational periods.
 							</p>
 									<img src="images/Solar_cycle.gif" width="550px">
 									<p><br><br></p>
 
 									<p><b>qubit_simulation</b>  &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a>
-										<br>Numerical solutions to complex many-body models are severely limited by classical computational power.
+										<br>
+										Abstract:
+										<br>
+										Numerical solutions to complex many-body models are severely limited by classical computational power.
 										Using controllable quantum devices may help with the simulation of these models.
 										One approach, known as the variational quantum algorithm, is based on tailoring evolution to prepare the a priori
 										unknown ground states of model Hamiltonians. In this work, we address the challenge of finding patterns in optimal
@@ -115,7 +135,15 @@
 										large-scale simulations on the quantum device.
 										</p>
 									<p><br><br></p>
-
+									
+								<p><b>no_wave_qm</b>  &emsp; <a href="https://github.com/mscoggs/no_wave_qm">Github Repository</a>
+									<br>
+									We consider a no-collapse intepretation of quantum mechanics which combines the many worlds interpreation and Bohmian mechanics.
+									This interpretation reproduces the empirical predicitions of quantum mechanics while appearing fairly classical. We get rid of the
+									wave function and replace it with particles interacting via a Newtonian-esque force, and many worlds. We hope that this will help
+									blend the classical and quantum world.
+									</p>
+								<p><br><br></p>
 							</article>
 
 						<!-- About -->
