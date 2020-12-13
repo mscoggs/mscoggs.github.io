@@ -58,24 +58,30 @@
 									<br>&emsp;BA | Philosophy | Western Washington University | 2020
 								</p>
 								<p><b>Research Interests:</b>
-									<p><br>&emsp;My undergraduate research experience has involved work in condensed matter, quantum foundations,
+									<p><br>&emsp;My undergraduate research experience has involved work in condensed matter (quantum dynamics), quantum foundations,
 									astronomy, and machine learning applications to astronomy. These experiences have solidified an interest
-									in doing both analytical work and creating large scale simulations in order to solve problems in physics. Content-wise, I
-									have always been interested cosmology, astrophysics. Combining these interests, I'd like to employ both
-									computational tools and theoretical skills to solve problems in Astrophysics and Cosmology. I'm especially interested in early-universe
-									simulations, black hole-collision simulations, numerical relativity.
+									in doing both analytical and computational methods. Content-wise, I
+									have always been interested cosmology and astrophysics. Combining these interests, I'd like to use both
+									computational tools and theoretical skills to solve problems in Astrophysics and Cosmology. I'm especially interested in questions relating to the Planck Epoch,
+									black holes, neutron stars, and dark matter.
 									</p>
 
 
 								</p>
 								<p><b>Publications:</b>
-									<br>&emsp;<a href="https://iopscience.iop.org/article/10.3847/2515-5172/ab45a0">Using Flare Rates to Search for Stellar Activity Cycles (2019)
-									<br>&emsp;<a href="https://ui.adsabs.harvard.edu/abs/2020AJ....159..182O/abstract">APOGEE Net: Improving the derived spectral parameters for young stars through deep learning (2020)
+									<br>&emsp;<a href="https://iopscience.iop.org/article/10.3847/2515-5172/ab45a0">Using Flare Rates to Search for Stellar Activity Cycles (2019)</a>
+
+									<br>&emsp;<a href="https://ui.adsabs.harvard.edu/abs/2020AJ....159..182O/abstract">APOGEE Net: Improving the derived spectral parameters for young stars through deep learning (2020)</a>
+
+								<p><b>Under Review:</b>
+									<br>&emsp;<a href="https://arxiv.org/abs/2012.05476"> Topological and Geometric Patterns in Optimal Bang-Bang Protocols for Variational
+Quantum Algorithms: Application to the XXZ Model on the Square Lattice (under review at Physical Review X, Dec. 2020)</a>
 								<p><b>Publications in Preparation:</b>
-									<br>&emsp;<a href="Papers_In_Prep/Qubit_Sim.pdf"> Searching for Patterns in the Optimal Controls which Prepare the Ground State of a Superconducting Device
-									<br>&emsp;<a href="Papers_In_Prep/Scoggins_Roser_Draft.pdf"> QF
+									<br>&emsp; Non-Quantum Behaviors of Hamilton-Jacobi Quantum Theory
 											</a></p>
 							</article>
+
+
 
 						<!-- Work -->
 							<article id="research">
@@ -108,6 +114,23 @@
 									<img src="images/HR.png" width="550px">
 									<p><br><br></p>
 
+
+									<p><b>qubit_simulation</b>  &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a> &emsp; <a href="https://arxiv.org/abs/2012.05476"> Paper (under review at Physical Review X)</a>
+										<br><br>&emsp;With the ultimate goal of finding the optimal path (values of the controls over time = protocols) to the ground state of a many-body Hamiltonian, we classicaly simulate this for small feasible system sizes.
+										For larger system sizes where classical simulation isn't feasible, the use of a quantum device is a promising alternative. This would involve starting with some easy-to-prepare initial state,
+										and making a guess for the evolution which evolves the initial state into the desired ground state. Finding the desired ground state requires minimizing the measured energy of the post-evolution state. At a plateau,
+										evolution is likely evolving into the target ground state. However, the complexity of the parameter space makes finding the optimal path to this ground state difficult. Our work aims to
+										mitigate this by finding patterns in the paths for classically feasible system sizes, which can then be extrapolated to inform efficient optimization on the chip. We introduce
+										many new metrics for the protocols and succesfully find patterns across system sizes, along with creating and introducing state-of-the-art algorithms that find these optimal protocls.
+										<br><br>
+										Abstract:
+										<br>&emsp;
+										In this work, we address the challenge of uncovering patterns in variational optimal protocols for taking the system to ground states of many-body Hamiltonians, using variational quantum algorithms. We develop highly optimized classical Monte Carlo (MC) algorithms to find the optimal protocols for transformations between the ground states of the square-lattice XXZ model for finite systems sizes. The MC method obtains optimal bang-bang protocols, as predicted by Pontryagin's minimum principle. We identify the minimum time needed for reaching an acceptable error for different system sizes as a function of the initial and target states and uncover correlations between the total time and the wave-function overlap. We determine a dynamical phase diagram for the optimal protocols, with different phases characterized by a topological number, namely the number of on-pulses. Bifurcation transitions as a function of initial and final states, associated with new jumps in the optimal protocols, demarcate these different phases. The number of pulses correlates with the total evolution time. In addition to identifying the topological characteristic above, i.e., the number of pulses, we introduce a correlation function to characterize bang-bang protocols' quantitative geometric similarities. We find that protocols within one phase are indeed geometrically correlated. Identifying and extrapolating patterns in these protocols may inform efficient large-scale simulations on quantum devices.
+										</p>
+									<p><br><br></p>
+
+
+
 								<p><b>flare_cycles</b> &emsp; <a href="https://github.com/mscoggs/flare_cycles">Github Repository</a> &emsp; <a href="https://iopscience.iop.org/article/10.3847/2515-5172/ab45a0">Publication</a>
 									<br><br>&emsp;The sun's solar cycle lasts roughly 11-years (<a href="https://en.wikipedia.org/wiki/Solar_cycle">solar cycle</a>). We ask if other stars also have a cycle, and attempt to
 								  answer this using stellar flares as the metric (who's frequency changes within the cycle). The results don't show unambigious results, but we only have
@@ -127,34 +150,16 @@
 									<img src="images/Solar_cycle.gif" width="550px">
 									<p><br><br></p>
 
-									<p><b>qubit_simulation</b>  &emsp; <a href="https://github.com/mscoggs/astro_ml">Github Repository</a> &emsp; <a href="Papers_In_Prep/Qubit_Sim.pdf"> Paper in Prep</a>
-										<br><br>
-										Abstract:
-										<br>&emsp;
-										Numerical solutions to complex many-body models are severely limited by classical computational power.
-										Using controllable quantum devices may help with the simulation of these models.
-										One approach, known as the variational quantum algorithm, is based on tailoring evolution to prepare the a priori
-										unknown ground states of model Hamiltonians. In this work, we address the challenge of finding patterns in optimal
-										variational protocols, where an optimal protocol minimizes the total time it takes to get from the ground state of
-										one device to the ground state of another target device. Using a classical computer, we simulate the evolution of
-										superconducting ‘gmon’ qubits and use Monte-Carlo (MC) simulations to find this optimal protocol for finite systems
-									  sizes. The MC method finds optimal protocols that are roughly bang-bang, as predicted by theory. We compare the MC
-										method with an adiabatic method and show that it reaches the ground state in shorter times. Further research will
-										identify patterns in these protocols that can be extrapolated to larger system sizes in order to inform efficient
-										large-scale simulations on the quantum device.
-										</p>
-									<p><br><br></p>
 
-								<p><b>no_wave_qm</b>  &emsp; <a href="https://github.com/mscoggs/no_wave_qm">Github Repository</a> &emsp; <a href="Papers_In_Prep/Scoggins_Roser_Draft.pdf"> Paper in Prep</a>
+
+								<p><b>no_wave_qm</b>  &emsp; <a href="https://github.com/mscoggs/no_wave_qm">Github Repository</a> &emsp; Paper in Prep</a>
 									<br><br>
 									Abstract:
 									<br>&emsp;
-									We consider a no-collapse interpretation of quantum mechanics which combines the many worlds interpretation and Bohmian mechanics.
-									This interpretation reproduces the empirical predicitions of quantum mechanics while appearing fairly classical. We get rid of the
-									wave function and replace it with particles interacting via a Newtonian-esque force, and many worlds. We hope that this will help
-									blend the classical and quantum world. While intuitively more comfortable for some, this comes at the cost of a quantization condition
-									in order to maintain quantum states. Our goal is to simulate quantum systems that start in non-quantum states (without this condition being applied)
-									in the hope that they evolve into quantum states -- allowing us to reconsider the necessity of the quantization condition.
+                  We consider a Hamilton-Jacobi formulation of quantum theory, which replaces the wave-function description with a configuration-space density and associated equations of motion.
+									To reproduce quantum behavior exactly, a particular ad-hoc quantization condition has to be assumed. Our work investigates the implications of relaxing this condition,
+									leading to a slightly generalized framework that may or may not differ empirically from the standard formulation. Our findings will impact the viability of such formulations.
+									Investigation involves simulation of systems under these equations of motion, along with trajectory tracking using a 4th order Runge Kutta method. We plan to publish before Fall 2021.
 									</p>
 								<p><br><br></p>
 							</article>
