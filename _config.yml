@@ -31,10 +31,10 @@ author:
   employer         : "Columbia University"
   uri              : # URL
   email            : "mts2188@columbia.edu"
+  #nasaads          : "https://ui.adsabs.harvard.edu/search/p_=0&q=-docs(4b3a4d11f76d01aa1327cd7843deb708)%20author%3A%22Scoggins%2C%20Matthew%20T.%22&sort=date%20desc%2C%20bibcode%20desc"
 
   # Academic websites
   academia         : #"https://mscoggs.github.io"
-  nasaads          : "https://ui.adsabs.harvard.edu/search/p_=0&q=-docs(4b3a4d11f76d01aa1327cd7843deb708)%20author%3A%22Scoggins%2C%20Matthew%20T.%22&sort=date%20desc%2C%20bibcode%20desc"
   arxiv            : "https://arxiv.org/search/?searchtype=author&query=Scoggins%2C+M+T"
   googlescholar    : "https://scholar.google.com/citations?user=sFb7jXoAAAAJ&hl=en"
   inspire-hep      : # URL
